@@ -1,6 +1,6 @@
 services:
   defo:
-    image: registry:latest
+    image: nginx:latest
     hosts:
       - ~example.com
     prestart:

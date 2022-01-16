@@ -1,9 +1,14 @@
 services:
   defo:
-    image: nginx:latest
+    image: nginx:1.21.5
     hosts:
       - ~example.com
-    prestart:
-      - echo 'Done' > /tmp/hello.txt
+    hooks:
+      prestart:
+        - echo 'Done' > /tmp/hello.txt
     env:
       CHAUSSURE_DE_SKI: outlawed
+    requires:
+      - mysql
+  mysql:
+    image: mysql:8.0.27

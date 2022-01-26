@@ -1,13 +1,10 @@
 services:
   defo:
     image: nginx:1.21.5
-    hosts:
-      - ~example.com
-    hooks:
-      prestart:
-        - echo 'Done' > /tmp/hello.txt
-    env:
-      CHAUSSURE_DE_SKI: outlawed
+    requires:
+      - mysql
+  rwc:
+    image: nginx:1.21.5
     requires:
       - mysql
   mysql:
@@ -19,3 +16,5 @@ services:
     image: nginx:1.21.5
   another_nginx:
     image: nginx:1.21.5
+something:
+  image: nginx:1.21.5

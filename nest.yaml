@@ -1,20 +1,9 @@
 services:
-  defo:
+  a:
     image: nginx:1.21.5
     requires:
-      - mysql
-  rwc:
+      - b
+  b:
     image: nginx:1.21.5
     requires:
-      - mysql
-  mysql:
-    image: nginx:1.21.5
-    requires:
-      - some_nginx
-      - another_nginx
-  some_nginx:
-    image: nginx:1.21.5
-  another_nginx:
-    image: nginx:1.21.5
-  somethng:
-    image: nginx:1.21.5
+      - a

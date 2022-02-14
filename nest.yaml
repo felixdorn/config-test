@@ -18,3 +18,9 @@ services:
     image: nginx:1.21.5
   somethng:
     image: nginx:1.21.5
+control_plane:
+  host: nest.example.com
+proxy:
+  http: 8081
+  https: 8443
+  self_signed: true

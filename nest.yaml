@@ -1,5 +1,11 @@
 services:
-  mysql:
+  example:
     # will fail as it requires some variables on startup
-    image: mysql:8.0.28
-  
+    image: nginx:1.21.5
+    
+    registry: default
+registry:
+  default:
+    host: docker.io
+    username: myusername
+    password: {{.Secrets.RegistryDefaultPassword}}

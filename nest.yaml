@@ -2,10 +2,3 @@ services:
   example:
     # will fail as it requires some variables on startup
     image: nginx:1.21.5
-    
-    registry: default
-registries:
-  default:
-    host: docker.io
-    username: myusername
-    password: {{.Secrets.RegistryDefaultPassword}}

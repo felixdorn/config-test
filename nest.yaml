@@ -1,32 +1,5 @@
 services:
-  defo:
-    image: nginx:1.21.5
-    requires:
-      - mysql
-  rwc:
-    image: nginx:1.21.5
-    requires:
-      - mysql
   mysql:
     # will fail as it requires some variables on startup
     image: mysql:8.0.28
-    requires:
-      - some_nginx
-      - another_nginx
-  some_nginx:
-    image: nginx:1.21.5
-  another_nginx:
-    image: nginx:1.21.5
-  somethng:
-    image: nginx:1.21.5
-control_plane:
-  host: nest.example.com
-proxy:
-  http: 8081
-  https: 8443
-  self_signed: true
-network:
-  policy: smallest_subnet
-  subnets:
-    - 10.0.0.0/8
-    - 192.16.0.0/16
+  

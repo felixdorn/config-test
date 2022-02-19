@@ -2,5 +2,7 @@ services:
   example:
     # will fail as it requires some variables on startup
     image: nginx:1.21.5
+    hosts:
+      - ~example.com
 control_plane:
   host: nest.example.com

@@ -5,4 +5,4 @@ services:
     hosts:
       - ~example.com
 control_plane:
-  host: nest.example.com
+  host: vite.example.com
